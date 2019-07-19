@@ -5,3 +5,24 @@ body, html {
     margin: 0;
     font-family: Arial, Ubuntu, sans-serif;
 }
+
+.message {
+
+}
+
+.message-info {
+
+    border: 1px;
+}
+
+.message-success {
+
+}
+
+.message-warning {
+
+}
+
+.message-error {
+
+}
