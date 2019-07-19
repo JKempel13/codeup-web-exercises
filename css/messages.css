@@ -7,22 +7,29 @@ body, html {
 }
 
 .message {
-
+    margin: 1em;
+    border-radius: 3px;
+    border: 1px solid lightgrey;
+    padding: .5em;
+    width: calc(100% - 2em);
 }
 
 .message-info {
-
-    border: 1px;
+    background: rgb(208	222	252);
+    color: rgb(77 79 160);
 }
 
 .message-success {
-
+    color: rgb(82  137	96);
+    background: rgb(214	241	220);
 }
 
 .message-warning {
-
+    color: rgb(160	146	73);
+    background: rgb(252	250	206);
 }
 
 .message-error {
-
+    color: rgb(140	63	78);
+    background: rgb(244	212	215);
 }
