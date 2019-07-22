@@ -37,12 +37,13 @@ a {
     margin: 0;
     padding: 0;
 }
-
 .nav-link {
     color: var(--main-link-color);
     font-weight: bold;
     text-decoration: none;
     float: left;
+}
+.nav-item {
     display: inline-block;
     padding: 1.5em;
 }
@@ -51,7 +52,6 @@ a {
 }
 .profile {
     background: var(--light-bg);
-    position: relative;
     height: 80px;
 }
 .profile-form{
@@ -76,7 +76,7 @@ a {
 }
 
 .profile-image{
-    top: -30px;
+    top: 245px;
     position: absolute;
 }
 
@@ -112,18 +112,18 @@ a {
     overflow: auto;
 }
 .media-image {
-    width: 50px;
+    max-width: 50px;
     float: left;
     margin-top: 1.33em;
 }
 .media-body {
-    float: right;
+    float: left;
     width: calc(100% - 50px);
 }
 .profile-items {
     padding: 0;
+    list-style: none;
 }
 .profile-entry {
     margin: .5em;
-    list-style-type: none;
 }
