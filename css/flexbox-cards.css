@@ -65,27 +65,13 @@ a {
     border-radius: 4px;
 }
 
-/*.container {*/
-/*    display: flex;*/
-/*    align-items: center;*/
-/*}*/
-
-/*.card {*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    justify-content: center;*/
-/*}*/
 .container {
     display: flex;
-    margin-top: 1em;
+    align-items: center;
     /* This is a flex container */
 }
 
 .card {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: auto 18px;
-    flex-basis: 100%;
+    flex-basis: auto;
     /* This is a flex item */
 }
