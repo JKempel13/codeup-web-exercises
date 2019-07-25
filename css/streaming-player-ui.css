@@ -14,7 +14,7 @@ body {
      /*TODO: make the wrapper a grid container */
     display: grid;
     /*TODO: define five columns where the middle three columns are 400px and the outer columns fill the remaining space */
-    grid-template-columns: 100px 400px 400px 400px 100px;
+    grid-template-columns: 200px 400px 400px 400px 200px;
     /*TODO: add a gap of 1em around all grid items */
     grid-gap: 1em;
      /*no row properties are needed */
