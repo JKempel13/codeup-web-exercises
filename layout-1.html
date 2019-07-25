@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Layout 1</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                height: 100%;
+                width: 100%;
+                background: gold;
+            }
+            body {
+                margin: 0;
+                display: grid;
+                background: white;
+                grid-gap: .5em;
+                grid-template-rows: 80px 1fr 80px;
+                grid-template-columns: 20% 1fr 15%;
+                grid-template-areas:
+                        "header header header"
+                        "nav article ads"
+                        "nav footer footer";
+            }
+
+            .header {
+                grid-area: header;
+            }
+
+            .nav {
+                grid-area: nav;
+            }
+
+            .article {
+                grid-area: article;
+            }
+
+            .site-ads {
+                grid-area: ads;
+            }
+
+            .footer {
+                grid-area: footer;
+            }
+        </style>
+    </head>
+    <body>
+        <header class="header">Header</header>
+        <nav class="nav">Nav</nav>
+        <article class="article">Article</article>
+        <Ads class="site-ads">Ads</Ads>
+        <footer class="footer">Footer</footer>
+    </body>
+</html>
