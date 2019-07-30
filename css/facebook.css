@@ -1,0 +1,40 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}
+.top-nav {
+    background: #415B94;
+    color: #FFFFFF;
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    flex-direction: row;
+
+}
+.logo {
+    width: 40%;
+    position: relative;
+    font-family: inherit;
+
+}
+.btn {
+    color: #FFFFFF;
+    background-color: #415B94;
+    border-box: 1px solid;
+    float: right;
+}
+.data-input {
+    float: right;
+    display: inline-block;
+}
+
+.email {
+    float: left;
+    width: calc(30% - 40px);
+    position: absolute;
+}
+.password {
+    float: right;
+    width: calc(30% - 80px);
+}
+
