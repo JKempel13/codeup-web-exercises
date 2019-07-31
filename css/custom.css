@@ -12,7 +12,7 @@ h1 {
     position: absolute;
     display: block;
     background-color: rgba(255, 255, 255, .3);
-    opacity: 2;
+    opacity: .7;
     width: 100%;
     top: 50%;
     font-size: 46px;
@@ -44,8 +44,9 @@ nav {
     background: lightgrey;
     display: flex;
     justify-content: flex-end;
+    padding: .5em 1em;
 }
 
-.form-control {
-
+.sign-up {
+    color: #777777;
 }
