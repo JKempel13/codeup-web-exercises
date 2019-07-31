@@ -1,0 +1,51 @@
+.container-repsonsive {
+    position: relative;
+    text-align: center;
+}
+
+.jumbrotron img{
+    width: 100vw;
+    margin: 1em 0;
+}
+
+h1 {
+    position: absolute;
+    display: block;
+    background-color: rgba(255, 255, 255, .3);
+    opacity: 2;
+    width: 100%;
+    top: 50%;
+    font-size: 46px;
+}
+
+h2 {
+    position: relative;
+    padding: .5em 0;
+}
+
+.fas {
+    padding: .5em;
+}
+
+nav {
+    color: #D9D9D9;
+}
+
+.navbar-collapse form  button{
+    background-color: white;
+    color: black;
+    border: 1px solid #D9D9D9;
+}
+.card-body {
+    background: white;
+}
+
+.next, .checkout {
+    background: lightgrey;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.form-control {
+
+}
