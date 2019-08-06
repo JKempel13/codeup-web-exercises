@@ -1,58 +1,55 @@
 "use strict";
 
-console.log("Hello from external JavaScript");
-
-alert('Welcome to my Website!');
-
-var userFavoriteColor = prompt('What is your favorite color?');
-
-alert ("Great! " + userFavoriteColor + " is also my favorite color!!");
+// console.log("Hello from external JavaScript");
+//
+// alert('Welcome to my Website!');
+//
+// var userFavoriteColor = prompt('What is your favorite color?');
+//
+// alert ("Great, " + userFavoriteColor + " is also my favorite color!!");
 //=====================================//
 
-var dailyRentalRateDollars = 3;
-var littleMermaidDaysRented = prompt("How many days will Little Mermaid be rented?");
-var brotherBearDaysRented = prompt("How many days will Brother Bear be rented?");
-var herculesDaysRented = prompt("How many days will Hercule be rented?");
-var totalRentalCost = (Number(littleMermaidDaysRented) + Number(brotherBearDaysRented) + Number(herculesDaysRented)) * dailyRentalRateDollars;
-
-alert("You will owe $ " + totalRentalCost);
-
-totalRentalCost = (littleMermaidDaysRented + brotherBearDaysRented + herculesDaysRented) * dailyRentalRateDollars;
+// var dailyRentalRateDollars = 3;
+// var littleMermaidDaysRented = prompt("How many days was Little Mermaid rented?");
+// var brotherBearDaysRented = prompt("How many days was Brother Bear rented?");
+// var herculesDaysRented = prompt("How many days was Hercule rented?");
+// var totalRentalCost = (Number(littleMermaidDaysRented) + Number(brotherBearDaysRented) + Number(herculesDaysRented)) * dailyRentalRateDollars;
+//
+// alert("You owe Blockbuster $ " + totalRentalCost.toFixed(2));
+//
+// totalRentalCost = (littleMermaidDaysRented + brotherBearDaysRented + herculesDaysRented) * dailyRentalRateDollars;
 //=====================================//
 
-var googleHourlyRateDollars = 400;
-var amazonHourlyRateDollars = 380;
-var facebookHourlyRateDollars = 350;
-var googleHours = prompt("How many hours did you work for Google this week?");
-var amazonHours = prompt("How many hours did you work for Amazon this week?");
-var facebookHours = prompt("How many hours did you work for Facebook this week?");
-var totalPayment = (Number(googleHours)*googleHourlyRateDollars + Number(amazonHours)*amazonHourlyRateDollars + Number(facebookHours)*facebookHourlyRateDollars);
-
-alert("You will get paid $" + totalPayment);
-
-totalPayment = googleHours * googleHourlyRateDollars;
-totalPayment += amazonHours * amazonHourlyRateDollars;
-totalPayment += facebookHours * facebookHourlyRateDollars;
+// var googleHourlyRateDollars = Number(prompt("What is your Google hourly wage rate?"));
+// var amazonHourlyRateDollars = Number(prompt("What is your Amazon hourly wage rate?"));
+// var facebookHourlyRateDollars = Number(prompt("What is your Facebook hourly wage rate?"));
+// var googleHours = Number(prompt("How many hours did you work for Google this week?"));
+// var amazonHours = Number(prompt("How many hours did you work for Amazon this week?"));
+// var facebookHours = Number(prompt("How many hours did you work for Facebook this week?"))
+// var totalPayment = (Number(googleHours)*googleHourlyRateDollars + Number(amazonHours)*amazonHourlyRateDollars + Number(facebookHours)*facebookHourlyRateDollars);
+//
+// alert("You will get paid $" + totalPayment.toFixed(2));
+//
+// totalPayment = googleHours * googleHourlyRateDollars;
+// totalPayment += amazonHours * amazonHourlyRateDollars;
+// totalPayment += facebookHours * facebookHourlyRateDollars;
 //=========================================//
 
 var classIsNotFull = confirm("Is this class full?"); // boolean
-console.log (classIsNotFull);
+
 
 var classScheduleDoesNotConflict = confirm("Does this class conflict with your current schedule?"); // boolean
-console.log (classScheduleDoesNotConflict);
+
 
 var studentEnrolled = classIsNotFull && classScheduleDoesNotConflict;
 
-studentEnrolled = alert("Congrats! You can now enroll in this class.");
+alert("Student Enrolled: " + studentEnrolled);
 //======================================//
 
 var numberOfItems = confirm ("Do you have at least 2 items?"); // number
-console.log (numberOfItems);
 var offerIsValid = confirm ("Is the offer still valid?"); // boolean
-console.log (offerIsValid);
 var isPremiumMember = confirm ("Are you a Premium Member?"); // boolean
-console.log (isPremiumMember);
 var productDiscountApplied = offerIsValid && (isPremiumMember || numberOfItems > 2);
 
-productDiscountApplied = alert ("Discount has been applied!");
+alert ("Discount applied: " + productDiscountApplied);
 
