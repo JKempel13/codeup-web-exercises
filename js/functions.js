@@ -9,11 +9,11 @@
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
 
-// function sayHello (name) {
-//     return "Hello, " + name;
-// }
-//
-// console.log(sayHello("Jason"));
+function sayHello (name) {
+    return "Hello, " + name;
+}
+
+console.log(sayHello("Jason"));
 
 
 
@@ -25,10 +25,10 @@
  * console.log 'helloMessage' to check your work
  */
 
-// sayHello("Jason");
-// var helloMessage = sayHello("Jason");
-//
-// console.log(helloMessage);
+sayHello("Jason");
+var helloMessage = sayHello("Jason");
+
+console.log(helloMessage);
 
 
 /**
@@ -38,8 +38,8 @@
  * console.
  */
 
-// var myName = "Jason";
-// sayHello(myName);
+var myName = "Jason";
+sayHello(myName);
 
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
@@ -83,9 +83,10 @@ console.log(isTwo(random));
  */
 
 function calculateTip (percentage, billTotal) {
-    return percentage * billTotal;
+    return percentage/100 * billTotal.toFixed(2);
 }
 
+console.log (calculateTip(10, 100));
 
 /**
  * TODO:
@@ -94,10 +95,14 @@ function calculateTip (percentage, billTotal) {
  * then display the dollar amount they should tip
  */
 
-prompt("Bill Total");
-prompt("What percentage would you like to tip?");
-alert("You should pay: " + calculateTip(percent, Total));
+var billTotal = Number(prompt("Bill Total"));
+var percentage = Number(prompt("What percentage would you like to tip?"));
 
+console.log(typeof billTotal);
+
+alert("Suggested tip: $ " + calculateTip(percentage, billTotal));
+
+// calculateTip();
 
 /**
  * TODO:
@@ -115,6 +120,13 @@ alert("You should pay: " + calculateTip(percent, Total));
  */
 
 
-function applyDiscount (num1, num2) {
-    return applyDiscount(40, .10)
+function applyDiscount (originalPrice,discountPercent) {
+    return originalPrice - discountPercent;
 }
+
+var originalPrice = Number(prompt("How much is the total?"));
+var discountPercent = Number(prompt("How much is the discount?"));
+
+
+console.log (applyDiscount(100, 20));
+
