@@ -1,13 +1,21 @@
 "use strict";
-
 /**
  * TODO:
  * Create a function called 'sayHello' that takes a parameter 'name'.
  * When called, the function should return a message that says hello to the passed in name.
  *
+ *
  * Example
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
+
+// function sayHello (name) {
+//     return "Hello, " + name;
+// }
+//
+// console.log(sayHello("Jason"));
+
+
 
 /**
  * TODO:
@@ -17,12 +25,21 @@
  * console.log 'helloMessage' to check your work
  */
 
+// sayHello("Jason");
+// var helloMessage = sayHello("Jason");
+//
+// console.log(helloMessage);
+
+
 /**
  * TODO:
  * Store your name as a string in a variable named 'myName', and pass that
  * variable to the 'sayHello' function. You should see the same output in the
  * console.
  */
+
+// var myName = "Jason";
+// sayHello(myName);
 
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
@@ -46,6 +63,13 @@ var random = Math.floor((Math.random() * 3) + 1);
  * number)
  */
 
+function isTwo (num) {
+    return num === 2;
+    isTwo(random);
+}
+
+console.log(isTwo(random));
+
 /**
  * TODO:
  * Create a function named 'calculateTip' to calculate a tip on a bill at a
@@ -58,12 +82,22 @@ var random = Math.floor((Math.random() * 3) + 1);
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
 
+function calculateTip (percentage, billTotal) {
+    return percentage * billTotal;
+}
+
+
 /**
  * TODO:
  * Use prompt and alert in combination with your calculateTip function to
  * prompt the user for the bill total and a percentage they would like to tip,
  * then display the dollar amount they should tip
  */
+
+prompt("Bill Total");
+prompt("What percentage would you like to tip?");
+alert("You should pay: " + calculateTip(percent, Total));
+
 
 /**
  * TODO:
@@ -79,3 +113,8 @@ var random = Math.floor((Math.random() * 3) + 1);
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
+
+
+function applyDiscount (num1, num2) {
+    return applyDiscount(40, .10)
+}
