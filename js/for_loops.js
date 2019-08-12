@@ -12,19 +12,26 @@
 // This is how you get a random number between 50 and 100
 // var allCones = Math.floor(Math.random() * 50) + 50;
 // This expression will generate a random number between 1 and 5
-var randomNum;
 
-Math.floor(Math.random() * 200) + 20;
+// var x;
+//
+// Math.floor(Math.random() * 200) + 20;
+//
+// for (var i=1; i<=10; i++) {
+// x = Math.floor(Math.random() * 200) + 20;
+//     if (x % 2 === 0) {
+//         console.log(x + " is even");
+//     }
+//     else {
+//         console.log(x + " is odd");
+//     }
+// }
 
-for (randomNum=0; randomNum<=10; randomNum++) {
-randomNum = Math.floor(Math.random() * 200) + 20
-    if (randomNum === 0) {
-        console.log(randomNum +  " is even");
-    }
-    else if (randomNum % 2 === 0) {
-        console.log(randomNum + " is even");
-    }
-    else {
-        console.log(randomNum + " is odd");
-    }
-}
+
+// for(var i = 1; i <= 9; i++) {
+//     console.log(String(i).repeat(i))
+// }
+
+// for (var x=100;x > 0;x-=5) {
+//     console.log(x);
+// }
