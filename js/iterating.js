@@ -69,10 +69,8 @@
         return array[3];
     }
 
-
     console.log(first(names));
     console.log(second(names));
     console.log(third(names));
-
 
 })();
