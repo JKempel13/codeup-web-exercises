@@ -12,6 +12,7 @@
 
 <div id='map' style='width: 100%; height: 600px;'></div>
 <script src="js/keys.js"></script>
+<script src="js/mapbox-utils.js"></script>
 <script>
 
     mapboxgl.accessToken = mapboxToken;
@@ -21,21 +22,32 @@
         zoom: 10,
         center: [-98.4916, 29.4252]
     });
+    //
+    // // setTimeout(function () {
+    // //         map.setStyle('mapbox://styles/mapbox/satellite-v9');
+    // //         map.zoom(3);
+    // //     }, 5000);
+    //
+    // var popup = new mapboxgl.Popup()
+    //     .setHTML("<p>Codeup Rocks!</p>")
+    //     .addTo(map);
+    //
+    // var marker = new mapboxgl.Marker();
+    //     marker.setLngLat([-98.4916, 29.4260]);
+    //     marker.addTo(map);
+    //
+    //     marker.setPopup (popup);
+    //
+        geocode("600 Navarro St #350, San Antonio, TX 78205", mapboxToken).then(function(result) {
+            map.jumpTo({center: result});
+        });
 
-    setTimeout(function () {
-            map.setStyle('mapbox://styles/mapbox/satellite-v9');
-            map.zoom(3);
-        }, 5000);
+    // reverseGeocode({lng: -98.4861, lat: 29.4260}, mapboxToken).then(function(results) {
+    //     // logs the address for The Alamo
+    //     console.log(results);
+    // });
 
-    var popup = new mapboxgl.Popup()
-        .setHTML("<p>Codeup Rocks!</p>")
-        .addTo(map);
 
-    var marker = new mapboxgl.Marker();
-        marker.setLngLat([-98.4916, 29.4260]);
-        marker.addTo(map);
-
-        marker.setPopup (popup);
 
 </script>
 </body>

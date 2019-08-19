@@ -20,33 +20,31 @@
 
 <!-- The HTML element that serves as the Mapbox container -->
 <div id='map'></div>
-<script src="js/keys.js"></script>
 
 <!-- Mapbox JS -->
 <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+<script src="js/keys.js"></script>
+<script src="js/mapbox-utils.js"></script>
 
 <!-- Custom JS -->
 <script>
     mapboxgl.accessToken = mapboxToken;
     var map = new mapboxgl.Map({
         container: 'map',
-        style: 'mapbox://styles/mapbox/satellite-v9',
+        style: 'mapbox://styles/mapbox/streets-v9',
         zoom: 10,
-        center: [-77.0369, 38.9072]
+        center: [-98.4916, 29.4252]
     });
 
+    geocode("Whitefish, Montana", mapboxToken).then(function(result) {
+        map.jumpTo({center: result});
+        console.log(result);
+    });
 
-    var popup = new mapboxgl.Popup()
-        .setHTML("<p>Lincoln Memorial</p>");
+    reverseGeocode({lng: -157.8060, lat: 21.2620}, mapboxToken).then(function(results) {
 
-
-    var marker = new mapboxgl.Marker()
-        .setLngLat([-77.0502, 38.8893])
-        .setPopup(popup)
-        .addTo(map);
-
-    marker.togglePopup();
-    marker.draggable = true;
+        console.log(results);
+    });
 
 
 
