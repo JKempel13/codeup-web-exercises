@@ -76,22 +76,23 @@
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
         // subParagraphs[0].innerText = "Mission Accomplished!";
 
+        // -----------------------PART 2-------------------------- //
 
-        var listener1 = function (event) {
+        var listener1 = function () {
             mainHeader.innerText = "Javascript is Cool";
         };
 
         // register the listener to handle clicks on btn1
-        document.getElementById('btn1').addEventListener('click', listener1, false);
+        document.getElementById('btn1').addEventListener('click', listener1);
 
-        var listener2 = function (event) {
+        var listener2 = function () {
             subHeader.style.color = "blue";
         };
 
         // register the listener to handle clicks on btn2
-        document.getElementById('btn2').addEventListener('click', listener2, false);
+        document.getElementById('btn2').addEventListener('click', listener2);
 
-        var listener3 = function (event) {
+        var listener3 = function () {
             for (var l = 0; l < listItems.length; l += 1) {
                 var dbidValue = listItems[l].getAttribute('data-dbid');
 
@@ -104,14 +105,14 @@
         };
 
         // register the listener to handle clicks on btn3
-        document.getElementById('btn3').addEventListener('click', listener3, false);
+        document.getElementById('btn3').addEventListener('click', listener3);
 
-        var listener4 = function (event) {
+        var listener4 = function () {
             subParagraphs[0].innerText = "Mission Accomplished!";
         };
 
         // register the listener to handle clicks on btn4
-        document.getElementById('btn4').addEventListener('click', listener4, false);
+        document.getElementById('btn4').addEventListener('click', listener4);
 
     })();
 </script>
