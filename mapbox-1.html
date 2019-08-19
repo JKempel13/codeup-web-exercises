@@ -22,11 +22,20 @@
         center: [-98.4916, 29.4252]
     });
 
-
     setTimeout(function () {
             map.setStyle('mapbox://styles/mapbox/satellite-v9');
             map.zoom(3);
         }, 5000);
+
+    var popup = new mapboxgl.Popup()
+        .setHTML("<p>Codeup Rocks!</p>")
+        .addTo(map);
+
+    var marker = new mapboxgl.Marker();
+        marker.setLngLat([-98.4916, 29.4260]);
+        marker.addTo(map);
+
+        marker.setPopup (popup);
 
 </script>
 </body>
