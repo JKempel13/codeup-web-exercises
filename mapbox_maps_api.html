@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Geocode Examples</title>
+    <!-- Mapbox CSS -->
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.2.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.2.1/mapbox-gl.css' rel='stylesheet' />
+    <!-- Custom CSS -->
+    <style>
+        #map {
+            /* the width and height may be set to any size */
+            width: 100%;
+            height: 700px;
+        }
+    </style>
+</head>
+<body>
+
+
+<div id='map' style='width: 100%; height: 600px;'></div>
+
+<!-- Mapbox Geocoder Util Methods -->
+
+<script src="js/mapbox-utils.js"></script>
+<script src="js/keys.js"></script>
+
+<!-- Custom JS -->
+<script>
+
+var favRestaurant = [
+    {
+        Name: "Blackbeard's",
+        Latitude: "-97.169143",
+        Longitude: "26.116911"
+    },
+    {
+        Name: "Pei Wei",
+        Latitude: "-98.708395",
+        Longitude: "29.436534"
+    },
+    {
+        Name: "Olive Garden",
+        Latitude: "-98.708344",
+        Longitude: "29.489434"
+    }
+];
+
+console.log(favRestaurant);
+
+favRestaurant.forEach(function (restaurant) {
+    geocode(favRestaurant.Name, mapboxToken).then(function (result) {
+        setCenter([favRestaurant.Latitude,favRestaurant.Longitude]);
+        setZoom(15);
+        });
+    });
+
+
+    // setTimeout(function () {
+    //     geocode("5439 W Loop 1604 N, San Antonio, TX 78253", mapboxToken).then(function (result) {
+    //         console.log(result);
+    //         setCenter(result);
+    //         setZoom(15)
+    //     });
+    //     }, 3000);
+    // });
+
+    // var popup = new mapboxgl.Popup()
+    //     .setHTML("<p>Blackbeard's !</p>")
+    //     .addTo(map);
+    //
+    // var marker = new mapboxgl.Marker();
+    //     marker.setLngLat([-97.169143, 26.116911]);
+    //     marker.addTo(map);
+    //
+    //     marker.setPopup (popup);
+    //
+
+
+
+
+
+
+
+
+
+    // the  geocode method from mapbox-utils.js
+
+</script>
+</body>
+</html>
