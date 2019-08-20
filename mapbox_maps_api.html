@@ -51,7 +51,7 @@ console.log(favRestaurant);
 favRestaurant.forEach(function (restaurant) {
     geocode(favRestaurant.Location, mapboxToken).then(function (result) {
         console.log(result);
-        map.setCenter(result);
+        // setCenter([result]);
         });
     });
 
