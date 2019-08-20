@@ -31,27 +31,27 @@
 var favRestaurant = [
     {
         Name: "Blackbeard's",
-        Latitude: "-97.169143",
-        Longitude: "26.116911"
+        Location: [-97.169143, 26.116911],
+        Address: "103 E Saturn Ln, South Padre Island, TX 78597"
     },
     {
         Name: "Pei Wei",
-        Latitude: "-98.708395",
-        Longitude: "29.436534"
+        Location: [-98.708395, 29.436534],
+        Address: "430 W Loop 1604 N Suite 101, San Antonio, TX 78251"
     },
     {
         Name: "Olive Garden",
-        Latitude: "-98.708344",
-        Longitude: "29.489434"
+        Location: [-98.708344,29.489434],
+        Address: "5439 W Loop 1604 N, San Antonio, TX 78253"
     }
 ];
 
 console.log(favRestaurant);
 
 favRestaurant.forEach(function (restaurant) {
-    geocode(favRestaurant.Name, mapboxToken).then(function (result) {
-        setCenter([favRestaurant.Latitude,favRestaurant.Longitude]);
-        setZoom(15);
+    geocode(favRestaurant.Location, mapboxToken).then(function (result) {
+        console.log(result);
+        map.setCenter(result);
         });
     });
 
