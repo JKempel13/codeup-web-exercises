@@ -3,15 +3,15 @@
 // Make a function named isNumeric(input) that returns if the input is a number like 5 or 2.3 or a string containing only a number like "2".
 //     Example isNumeric(3) is - true. isNumeric("banana") should return false.
 
-//     function isNumeric(input) {
-//     if (input === "number") {
-//         return true;
-//     } else {
-//         return false;
-//     }
-// }
-//
-// console.log(isNumeric());
+    function isNumeric(input) {
+    if (input === "number") {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+console.log(isNumeric(45));
 
 // Make a function named isEqual(input1, input2) that returns if both inputs have the same value. areEqual
 
