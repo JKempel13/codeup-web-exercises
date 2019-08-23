@@ -4,14 +4,22 @@
     <title>Curriculum Code Sample</title>
 </head>
 <body>
-
+<h1 class="header">Hello, how are you?</h1>
+<p id="some-text" class="more-words">This is my first attempt at working with JQuery</p>
+<ul id="codeup">
+    <li id="first-item" class="codeup">This is working</li>
+    <li id="second-item" class="codeup">This is NOT working</li>
+    <li id="third-item" class="codeup">This could work</li>
+</ul>
 <!-- INSERT HTML CODE SAMPLE HERE -->
-
 
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 <script>
-    $(document).ready(function() {
-        alert( 'The DOM has finished loading!' );
-    });
+
+    $('li').css('font-size','20px');
+    var contents= $('p').html();
+    alert(contents);
+    $("h1,p,li");
+
 </script>
 </body>
