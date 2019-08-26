@@ -4,23 +4,34 @@
     <title>Curriculum Code Sample</title>
 </head>
 <body>
-<h1 class="header">Hello, how are you?</h1>
-<p id="some-text" class="more-words">This is my first attempt at working with JQuery</p>
-<ul id="codeup">
-    <li id="first-item" class="codeup">This is working</li>
-    <li id="second-item" class="codeup">This is NOT working</li>
-    <li id="third-item" class="codeup">This could work</li>
-</ul>
-<!-- INSERT HTML CODE SAMPLE HERE -->
+    <h1 class="header">Hello, how are you?</h1>
+    <div>
+        <p id="some-text" class="more-words">This is my first attempt at working with JQuery</p>
+    </div>
+    <h2>JQuery can be fun!</h2>
+    <ul id="codeup">
+        <li id="first-item" class="codeup">This is working</li>
+        <li id="second-item" class="codeup">This is NOT working</li>
+        <li id="third-item" class="codeup">This could work</li>
+    </ul>
 
-<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-<script>
 
-    $('li').css('font-size','20px');
+    <!-- INSERT HTML CODE SAMPLE HERE -->
 
-    $("h1,p,ul").css('background-color', 'red');
-    var contents= $('h1').html();
-    alert(contents);
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // $('.codeup').css('border','1px solid red');
+            // $('li').css('font-size','20px').css('background','palevioletred');
+            // $('h1').css('background-color', 'paleturquoise');
+            // $('p').css('background-color', 'skyblue');
+            $("h1,p,li").css('background', '#ef0');
+            // var contents= $('h1').html();
+            //     alert(contents);
+        });
 
-</script>
+
+
+
+    </script>
 </body>
