@@ -20,18 +20,28 @@
 
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <script>
-        $(document).ready(function(){
-            // $('.codeup').css('border','1px solid red');
-            // $('li').css('font-size','20px').css('background','palevioletred');
-            // $('h1').css('background-color', 'paleturquoise');
-            // $('p').css('background-color', 'skyblue');
-            $("h1,p,li").css('background', '#ef0');
-            // var contents= $('h1').html();
-            //     alert(contents);
+        // $(document).ready(function(){
+        //     // $('.codeup').css('border','1px solid red');
+        //     // $('li').css('font-size','20px').css('background','palevioletred');
+        //     // $('h1').css('background-color', 'paleturquoise');
+        //     // $('p').css('background-color', 'skyblue');
+        //     $("h1,p,li").css('background', '#ef0');
+        //     // var contents= $('h1').html();
+        //     //     alert(contents);
+        // });
+        $('h1').click(function() {
+            $(this).css('background-color', 'skyblue')
         });
-
-
-
+        $('p').dblclick(function(){
+            $(this).css('font-size','18px')
+        });
+        $('li').hover(
+            function () {
+            $(this).css('color', 'red')
+            },
+            function(){
+                $(this).css('color','black')
+            });
 
     </script>
 </body>
