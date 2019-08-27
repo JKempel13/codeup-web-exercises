@@ -14,13 +14,16 @@
         <li id="second-item" class="codeup">This is NOT working</li>
         <li id="third-item" class="codeup">This could work</li>
     </ul>
+    <div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate deleniti earum enim ex facilis maxime molestias nisi numquam ratione tenetur. Asperiores dicta dolore doloribus incidunt minus quod repudiandae. Aspernatur, similique.</p>
+    </div>
 
 
     <!-- INSERT HTML CODE SAMPLE HERE -->
 
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <script>
-        // $(document).ready(function(){
+        $(document).ready(function(){
         //     // $('.codeup').css('border','1px solid red');
         //     // $('li').css('font-size','20px').css('background','palevioletred');
         //     // $('h1').css('background-color', 'paleturquoise');
@@ -28,7 +31,6 @@
         //     $("h1,p,li").css('background', '#ef0');
         //     // var contents= $('h1').html();
         //     //     alert(contents);
-        // });
         $('h1').click(function() {
             $(this).css('background-color', 'skyblue')
         });
@@ -37,11 +39,11 @@
         });
         $('li').hover(
             function () {
-            $(this).css('color', 'red')
+            $(this).css('color', 'red');
             },
             function(){
                 $(this).css('color','black')
             });
-
+        })
     </script>
 </body>
