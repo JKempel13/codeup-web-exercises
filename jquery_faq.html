@@ -8,9 +8,6 @@
             visibility: hidden;
         }
 
-        /*.highlighted {*/
-
-        /*}*/
         .show {
             background-color: #4CAF50;
             border: none;
@@ -21,37 +18,52 @@
             display: inline-block;
             font-size: 16px;
         }
-        .accordion {
-            background-color: #eee;
-            color: #444;
-            cursor: pointer;
-            padding: 18px;
-            width: 100%;
-            text-align: left;
-            border: none;
-            outline: none;
-            transition: 0.4s;
+
+        #register {
+            display:none;
         }
-        .active, .accordion:hover {
-            background-color: #ccc;
-        }
-        .panel {
-            padding: 0 18px;
-            background-color: white;
+
+        ul {
             display: none;
-            overflow: hidden;
         }
-        .panel {
-            padding: 0 18px;
-            background-color: white;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.2s ease-out;
-        }
+        /*.accordion {*/
+        /*    background-color: #eee;*/
+        /*    color: #444;*/
+        /*    cursor: pointer;*/
+        /*    padding: 18px;*/
+        /*    width: 100%;*/
+        /*    text-align: left;*/
+        /*    border: none;*/
+        /*    outline: none;*/
+        /*    transition: 0.4s;*/
+        /*}*/
+        /*.active, .accordion:hover {*/
+        /*    background-color: #ccc;*/
+        /*}*/
+        /*.panel {*/
+        /*    padding: 0 18px;*/
+        /*    background-color: white;*/
+        /*    display: none;*/
+        /*    overflow: hidden;*/
+        /*}*/
+        /*.panel {*/
+        /*    padding: 0 18px;*/
+        /*    background-color: white;*/
+        /*    max-height: 0;*/
+        /*    overflow: hidden;*/
+        /*    transition: max-height 0.2s ease-out;*/
+        /*}*/
     </style>
 </head>
 <body>
-<h1>10 FAQs about national parks.</h1>
+<div>
+    <h1>Would you like to sign up for our newsletter?</h1>
+    <span>X</span>
+</div>
+
+<h2 id="register">Would you like to register?</h2>
+
+<h1 id="faq">10 FAQs about national parks.</h1>
 
 <h2>I want to be a picture</h2>
 
@@ -168,7 +180,7 @@
         $(this).parent().children().first().css('color', 'blue');
     });
 
-    $('h1').hover(
+    $('#faq').hover(
         function() {
             $(this).next().html('<img src="img/bulldog.jpeg">');
         },
@@ -176,6 +188,22 @@
             $(this).next().html('<h2>I want to be a picture</h2>');
         }
     );
+
+    $("span").click(function(e) {
+        var letter = $(e.target);
+        letter.parent().css('display', 'none');
+    });
+
+    $('h3').click(function(){
+        $(this).next().slideToggle(1000);
+    });
+
+    // var delayedMessage =
+    setTimeout(
+        function()
+        {
+            $('#register').fadeIn();
+        },(8000));
 
     // var acc = document.getElementsByClassName("accordion");
     // var i;
