@@ -4,13 +4,17 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
+        body {
+            background-image: url("img/park3.jpg");
+            background-size: cover;
+            background-attachment: fixed;
+            color: white;
+        }
+
         .invisible {
             visibility: hidden;
         }
 
-        /*.highlighted {*/
-
-        /*}*/
         .show {
             background-color: #4CAF50;
             border: none;
@@ -21,37 +25,52 @@
             display: inline-block;
             font-size: 16px;
         }
-        .accordion {
-            background-color: #eee;
-            color: #444;
-            cursor: pointer;
-            padding: 18px;
-            width: 100%;
-            text-align: left;
-            border: none;
-            outline: none;
-            transition: 0.4s;
+
+        #register {
+            display:none;
         }
-        .active, .accordion:hover {
-            background-color: #ccc;
-        }
-        .panel {
-            padding: 0 18px;
-            background-color: white;
+
+        ul {
             display: none;
-            overflow: hidden;
         }
-        .panel {
-            padding: 0 18px;
-            background-color: white;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.2s ease-out;
-        }
+        /*.accordion {*/
+        /*    background-color: #eee;*/
+        /*    color: #444;*/
+        /*    cursor: pointer;*/
+        /*    padding: 18px;*/
+        /*    width: 100%;*/
+        /*    text-align: left;*/
+        /*    border: none;*/
+        /*    outline: none;*/
+        /*    transition: 0.4s;*/
+        /*}*/
+        /*.active, .accordion:hover {*/
+        /*    background-color: #ccc;*/
+        /*}*/
+        /*.panel {*/
+        /*    padding: 0 18px;*/
+        /*    background-color: white;*/
+        /*    display: none;*/
+        /*    overflow: hidden;*/
+        /*}*/
+        /*.panel {*/
+        /*    padding: 0 18px;*/
+        /*    background-color: white;*/
+        /*    max-height: 0;*/
+        /*    overflow: hidden;*/
+        /*    transition: max-height 0.2s ease-out;*/
+        /*}*/
     </style>
 </head>
 <body>
-<h1>10 FAQs about national parks.</h1>
+<div>
+    <h1>Would you like to sign up for our newsletter?</h1>
+    <span>X</span>
+</div>
+
+<h2 id="register">Would you like to register for this site?</h2>
+
+<h1 id="faq">10 FAQs about national parks.</h1>
 
 <h2>I want to be a picture</h2>
 
@@ -86,8 +105,38 @@
 </dl>
 
 
-<button class="accordion">Big Bend National Park</button>
-<div class="panel">
+<!--<button class="accordion">Big Bend National Park</button>-->
+<!--<div class="panel">-->
+<!--    <h3 id="national-parks-heading">Big Bend National Park</h3>-->
+<!--    <ul id="national-parks">-->
+<!--        <li>The Rio Grande River runs through Big Bend National Park. The park is named Big Bend after the river's big bend in west Texas.</li>-->
+<!--        <li>Big Bend National Park is considered to be the largest Chihuahuan Desert protected region in the country.</li>-->
+<!--        <li>There are more species of birds found in Big Bend National Park than in any other national park in the U.S. There are over 450 different species.</li>-->
+<!--        <li>Because of the openness of Big Bend National Park it is considered one of the best places to star gaze.</li>-->
+<!--    </ul>-->
+<!--</div>-->
+<!--<button class="accordion">Guadalupe Mountains National Park</button>-->
+<!--<div class="panel">-->
+<!--    <h3>Guadalupe Mountains National Park</h3>-->
+<!--    <ul id="state-parks-texas">-->
+<!--        <li>Wildlife that can be found in Guadalupe National Park includes gray foxes, black bears, mountain lions, mule deer, badgers, skunks, bobcats, coyotes, and elk.</li>-->
+<!--        <li>There are 16 different species of bats found in Guadalupe National Park.</li>-->
+<!--        <li>Reptiles found within Guadalupe National Park include 5 rattlesnake species, bullsnakes, coachwhips, mountain short-horned lizards, collard lizards, and western box turtles.</li>-->
+<!--        <li>When Guadalupe National Park opened in 1971 there were just over 27,000 visitors. In 2012 there were 159,360 visitors to the park.</li>-->
+<!--    </ul>-->
+<!--</div>-->
+<!--<button class="accordion">Amistad National Recreation Area</button>-->
+<!--<div class="panel">-->
+<!--    <h3>Amistad National Recreation Area</h3>-->
+<!--    <ul>-->
+<!--        <li>The Amistad NRA area is home to dramatic 4,000 year-old rock art.</li>-->
+<!--        <li>The first visitors to the canyons that now form Amistad NRA arrived some 12,000 years ago following herds of large ice-age animals that grazed the grassy upland plateaus and ventured deep into the canyons for water. </li>-->
+<!--        <li>Amistad National Recreation Area supports flora and fauna in a combination not found in any other National Park Service site.</li>-->
+<!--        <li>The entire Amistad NRA area is underlain by 100 million year-old Cretaceous limestone.</li>-->
+<!--    </ul>-->
+<!--</div>-->
+
+
     <h3 id="national-parks-heading">Big Bend National Park</h3>
     <ul id="national-parks">
         <li>The Rio Grande River runs through Big Bend National Park. The park is named Big Bend after the river's big bend in west Texas.</li>
@@ -95,9 +144,6 @@
         <li>There are more species of birds found in Big Bend National Park than in any other national park in the U.S. There are over 450 different species.</li>
         <li>Because of the openness of Big Bend National Park it is considered one of the best places to star gaze.</li>
     </ul>
-</div>
-<button class="accordion">Guadalupe Mountains National Park</button>
-<div class="panel">
     <h3>Guadalupe Mountains National Park</h3>
     <ul id="state-parks-texas">
         <li>Wildlife that can be found in Guadalupe National Park includes gray foxes, black bears, mountain lions, mule deer, badgers, skunks, bobcats, coyotes, and elk.</li>
@@ -105,9 +151,6 @@
         <li>Reptiles found within Guadalupe National Park include 5 rattlesnake species, bullsnakes, coachwhips, mountain short-horned lizards, collard lizards, and western box turtles.</li>
         <li>When Guadalupe National Park opened in 1971 there were just over 27,000 visitors. In 2012 there were 159,360 visitors to the park.</li>
     </ul>
-</div>
-<button class="accordion">Amistad National Recreation Area</button>
-<div class="panel">
     <h3>Amistad National Recreation Area</h3>
     <ul>
         <li>The Amistad NRA area is home to dramatic 4,000 year-old rock art.</li>
@@ -115,10 +158,8 @@
         <li>Amistad National Recreation Area supports flora and fauna in a combination not found in any other National Park Service site.</li>
         <li>The entire Amistad NRA area is underlain by 100 million year-old Cretaceous limestone.</li>
     </ul>
-</div>
 
 <button class="show">Do Stuff!</button>
-
 
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
@@ -145,7 +186,7 @@
         $(this).parent().children().first().css('color', 'blue');
     });
 
-    $('h1').hover(
+    $('#faq').hover(
         function() {
             $(this).next().html('<img src="img/bulldog.jpeg">');
         },
@@ -154,38 +195,54 @@
         }
     );
 
-    var acc = document.getElementsByClassName("accordion");
-    var i;
+    $("span").click(function(e) {
+        var letter = $(e.target);
+        letter.parent().css('display', 'none');
+    });
 
-    for (i = 0; i < acc.length; i++) {
-        acc[i].addEventListener("click", function() {
-            /* Toggle between adding and removing the "active" class,
-            to highlight the button that controls the panel */
-            this.classList.toggle("active");
+    $('h3').click(function(){
+        $(this).next().slideToggle(1000);
+    });
 
-            /* Toggle between hiding and showing the active panel */
-            var panel = this.nextElementSibling;
-            if (panel.style.display === "block") {
-                panel.style.display = "none";
-            } else {
-                panel.style.display = "block";
-            }
-        });
-    }
-    var acc = document.getElementsByClassName("accordion");
-    var i;
+    // setTimeout(
+    //     function()
+    //     {
+    //         $('#register').fadeIn();
+    //     },(8000));
+    $('#register').delay(2000).fadeIn();
 
-    for (i = 0; i < acc.length; i++) {
-        acc[i].addEventListener("click", function() {
-            this.classList.toggle("active");
-            var panel = this.nextElementSibling;
-            if (panel.style.maxHeight){
-                panel.style.maxHeight = null;
-            } else {
-                panel.style.maxHeight = panel.scrollHeight + "px";
-            }
-        });
-    }
+    // var acc = document.getElementsByClassName("accordion");
+    // var i;
+    //
+    // for (i = 0; i < acc.length; i++) {
+    //     acc[i].addEventListener("click", function() {
+    //         /* Toggle between adding and removing the "active" class,
+    //         to highlight the button that controls the panel */
+    //         this.classList.toggle("active");
+    //
+    //         /* Toggle between hiding and showing the active panel */
+    //         var panel = this.nextElementSibling;
+    //         if (panel.style.display === "block") {
+    //             panel.style.display = "none";
+    //         } else {
+    //             panel.style.display = "block";
+    //         }
+    //     });
+    // }
+    // var acc = document.getElementsByClassName("accordion");
+    // var i;
+    //
+    // for (i = 0; i < acc.length; i++) {
+    //     acc[i].addEventListener("click", function() {
+    //         this.classList.toggle("active");
+    //         var panel = this.nextElementSibling;
+    //         if (panel.style.maxHeight){
+    //             panel.style.maxHeight = null;
+    //         } else {
+    //             panel.style.maxHeight = panel.scrollHeight + "px";
+    //         }
+    //     });
+    // }
 </script>
 
 </body>

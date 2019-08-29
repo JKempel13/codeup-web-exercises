@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Manipulation Warm Up</title>
+    <style>
+        body {
+            background: #999;
+        }
+    </style>
+</head>
+<body>
+
+<div>
+    <h1>The color is <span id="color">undefined</span></h1>
+    <form>
+        <div class="form-group">
+            <label for="color-spec"></label>
+            <input id="color-spec" type="text" placeholder="Please enter a color">
+            <button id="update-color-btn" type="button">Update color</button>
+        </div>
+    </form>
+    <br>
+    <button id="disappear-btn" type="button">Disappear</button>
+</div>
+
+<h1>This text will never disappear.</h1>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+<script>
+    "use strict";
+
+    $(document).ready(function() {
+
+        $("#update-color-btn").click(function(){
+            //    assign the value from the input into a variable
+            //    log what the value is
+            var newColor = $('#color-spec').val();
+            //    change the span with #color to the correct color
+            $('#color').css('color', newColor);
+            //    change the span with #color to the correct text
+            $('#color').html(newColor);
+
+        });
+
+        $("#disappear-btn").click(function(e){
+            // $('div').hide();
+            var $dBtn = $(e.target);
+            $dBtn.parent().css('display','none');
+
+        })
+        // var $dBtn = $('#disappear-btn'); ||
+        // var $dBtn = $(this); ||
+
+        // $('#disappear.btn').click(function(){
+        //     $('body').css('background-color','blue');
+        // })
+
+
+    })
+</script>
+</body>
+</html>
+
