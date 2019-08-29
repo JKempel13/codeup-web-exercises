@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
+        body {
+            background-image: url("img/park3.jpg");
+            background-size: cover;
+            background-attachment: fixed;
+            color: white;
+        }
+
         .invisible {
             visibility: hidden;
         }
@@ -61,7 +68,7 @@
     <span>X</span>
 </div>
 
-<h2 id="register">Would you like to register?</h2>
+<h2 id="register">Would you like to register for this site?</h2>
 
 <h1 id="faq">10 FAQs about national parks.</h1>
 
@@ -154,7 +161,6 @@
 
 <button class="show">Do Stuff!</button>
 
-
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
 <script>
@@ -198,12 +204,12 @@
         $(this).next().slideToggle(1000);
     });
 
-    // var delayedMessage =
-    setTimeout(
-        function()
-        {
-            $('#register').fadeIn();
-        },(8000));
+    // setTimeout(
+    //     function()
+    //     {
+    //         $('#register').fadeIn();
+    //     },(8000));
+    $('#register').delay(2000).fadeIn();
 
     // var acc = document.getElementsByClassName("accordion");
     // var i;
