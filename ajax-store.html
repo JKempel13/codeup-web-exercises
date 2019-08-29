@@ -2,13 +2,14 @@
 <html>
 <head>
     <title>Online Store</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
 
 <h1>My Tool Store</h1>
 
-<table id="products">
-    <thead>
+<table class="table" id="products">
+    <thead class="thead-dark">
         <tr>
             <th>Title</th>
             <th>Quantity</th>
@@ -16,20 +17,57 @@
             <th>Categories</th>
         </tr>
     </thead>
-    <tbody id="insertProducts"></tbody>
+<tbody id="insertProducts"></tbody>
 </table>
+<br>
+<button id="refresh">Refresh</button>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-
+<script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
 <script>
 (function() {
-    "use strict";
-    // TODO: Create an ajax GET request for /data/inventory.json
+    $(document).ready(function(){
 
-    // TODO: Take the data from inventory.json and append it to the products table
-    //       HINT: Your data should come back as a JSON object; use console.log() to inspect
-    //             its contents and fields
-    //       HINT: You will want to target #insertProducts for your new HTML elements
+    "use strict";
+        function refreshPage() {
+            $.ajax('data/inventory.json').done(function(data) {
+                $('#insertProducts').html(productsTable(data));
+            });
+        }
+
+    // TODO: Create an ajax GET request for /data/inventory.json
+            $.ajax('data/inventory.json').done(function (data) {
+                $('#insertProducts').html(productsTable(data));
+            });
+
+            // TODO: Take the data from inventory.json and append it to the products table
+            function productsTable(items) {
+                var htmlStr = "";
+                $("#insertProducts").html(htmlStr);
+                items.forEach(function (item) {
+                    htmlStr += "<table>";
+                    htmlStr += "    <thead>";
+                    htmlStr += "        <tr>";
+                    htmlStr += "            <td>" + item.title + "</td>";
+                    htmlStr += "            <td>" + item.quantity + "</td>";
+                    htmlStr += "            <td>" + item.price + "</td>";
+                    htmlStr += "            <td>" + item.categories + "</td>";
+                    htmlStr += "        </tr>";
+                    htmlStr += "    </thead>";
+                    htmlStr += "<tbody id='insertProducts'></tbody>";
+                    htmlStr += "</table>";
+                });
+                return htmlStr;
+            }
+
+            $("#refresh").click(function(e){
+                e.preventDefault();
+                refreshPage();
+            });
+    })
 })();
 </script>
 
