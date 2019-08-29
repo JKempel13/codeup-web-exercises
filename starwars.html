@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <form action="GET" href="https://hookb.in/DrQdJ8WreEi8V8ElqbNn"></form>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+
+<script>
+    $(document).ready(function() {
+        // $.ajax('https://swapi.co/api/films/').done(function (data) {
+        //     console.log(data)
+        // });
+        $.ajax({
+            "url": "https://swapi.co/api/films",
+            "type": "GET",
+            "data": {
+                "search": "A New Hope"
+            }
+        }).done(function(data,status,jqXhr) {
+            console.log(status);
+            console.log(data);
+            console.log(jqXhr);
+        }.fail(function(jqXhr,status,error) {
+            console.log(jqXhr);
+            console.log(status);
+            console.log(error);
+        }))
+    });
+    // $.ajax('https://swapi.co/api/films/',settings).done(function(data){
+        //     console.log(data.results[3].producer);
+        // }
+        //
+        // console.log($.ajax("https://hookb.in/DrQdJ8WreEi8V8ElqbNn?username=jason"));
+
+        // $.ajax('https://hookb.in/DrQdJ8WreEi8V8ElqbNn').done(function (data) {
+        //     console.log(data)
+        // });
+
+        // var settings = {
+        //     method:"POST",
+        //     data: {
+        //         username:"jkempel",
+        //         password:"password"
+        //     }
+        // };
+        // $.ajax("https://hookb.in/DrQdJ8WreEi8V8ElqbNn",settings).done(function(data){
+        //     console.log(data);
+        // });
+        // var settings = {
+        //     data: {
+        //        p:"yellow dogs",
+        //        r:"short hair"
+        //     }
+        // };
+        // $.ajax("https://hookb.in/DrQdJ8WreEi8V8ElqbNn",settings).done(function(data){
+        //     console.log(data);
+        // });
+</script>
+
+</body>
+</html>
