@@ -53,8 +53,8 @@
                     htmlStr += "        <tr>";
                     htmlStr += "            <td>" + item.title + "</td>";
                     htmlStr += "            <td>" + item.quantity + "</td>";
-                    htmlStr += "            <td>" + item.price + "</td>";
-                    htmlStr += "            <td>" + item.categories + "</td>";
+                    htmlStr += "            <td>" + item.price.toFixed(2) + "</td>";
+                    htmlStr += "            <td>" + item.categories.join(", ") + "</td>";
                     htmlStr += "        </tr>";
                     htmlStr += "    </thead>";
                     htmlStr += "<tbody id='insertProducts'></tbody>";

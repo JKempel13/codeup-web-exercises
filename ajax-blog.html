@@ -58,7 +58,7 @@
                blogPage += "    <dt>Content</dt>";
                blogPage += "    <dd class=\"hide\">" + post.content + "</dd>";
                blogPage += "    <dt>Category</dt>";
-               blogPage += "    <dd class=\"hide\">" + post.categories + "</dd>";
+               blogPage += "    <dd class=\"hide\">" + post.categories.join(", ") + "</dd>";
                blogPage += "    <dt>Date</dt>";
                blogPage += "    <dd class=\"hide\">" + post.date + "</dd>";
                blogPage += "    </dl>";
