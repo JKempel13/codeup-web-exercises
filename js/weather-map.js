@@ -13,14 +13,15 @@ $(document).ready(function(){
                 var humidity = data.daily.data[i].humidity;
                 var windSpeed = data.daily.data[i].windSpeed;
                 var pressure = data.daily.data[i].pressure;
-            for (var j = 0;j<iconsArr.length;j++){
-                if(iconsArr.name === weatherIcon) {
-                    $('img').html('<img src="img/SVG/">')
+
+            for (var j = 0; j < iconsArr.length; j++) {
+                if (weatherIcon === iconsArr.name) {
+                    $('img').html('<img src="img/SVG">')
                 }
             }
                 forecast += "<div class='card col-4'>";
                 forecast += "<h4>" + highTemp + "/" + lowTemp + "</h4>";
-                forecast+="<img src='img/SVG'>";
+                forecast += "<img src='img/SVG'>";
                 forecast += "<p>" + weatherIcon + "</p>";
                 forecast += "<p><span style='font-weight: bold'>Humidity: </span>" + humidity + "</p>";
                 forecast += "<p><span style='font-weight: bold'>Wind: </span>" + windSpeed + "</p>";
@@ -29,8 +30,6 @@ $(document).ready(function(){
             }
             return forecast;
         });
-
-
     });
 
     //============= weather icon array function=======================
