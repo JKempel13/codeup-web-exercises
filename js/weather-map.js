@@ -14,14 +14,9 @@ $(document).ready(function(){
                 var windSpeed = data.daily.data[i].windSpeed;
                 var pressure = data.daily.data[i].pressure;
 
-            for (var j = 0; j < iconsArr.length; j++) {
-                if (weatherIcon === iconsArr.name) {
-                    $('img').html('<img src="img/SVG">')
-                }
-            }
                 forecast += "<div class='card col-4'>";
                 forecast += "<h4>" + highTemp + "/" + lowTemp + "</h4>";
-                forecast += "<img src='img/SVG'>";
+                forecast += "<img src='"+ displayIconPicture(iconsArr,weatherIcon) +"'>";
                 forecast += "<p>" + weatherIcon + "</p>";
                 forecast += "<p><span style='font-weight: bold'>Humidity: </span>" + humidity + "</p>";
                 forecast += "<p><span style='font-weight: bold'>Wind: </span>" + windSpeed + "</p>";
@@ -30,7 +25,23 @@ $(document).ready(function(){
             }
             return forecast;
         });
+                function displayIconPicture (iconsArr,weatherIcon) {
+                    for (var j = 0; j < iconsArr.length; j++) {
+                        if (iconsArr[j].name === weatherIcon) {
+                            return iconsArr[j].link;
+                        }
+                    }
+                }
     });
+
+    // function checkIcon (icons, apiIcon) {
+    // ​
+    //        for(var i = 0; i < icons.length; i++){
+    //            if(icons[i].name === apiIcon){
+    //                return icons[i].link;
+    //            }
+    //        }
+    // }
 
     //============= weather icon array function=======================
 
