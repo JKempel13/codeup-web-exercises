@@ -9,6 +9,7 @@
     <style>
         body {
             background-color: #B3D9F8;
+
         }
         #blah {
             display: flex;
@@ -20,6 +21,8 @@
         #map {
             width: 100%;
             height: 600px;
+            top: 0;
+            bottom: 0;
         }
     </style>
 </head>
@@ -34,9 +37,9 @@
     <p></p>
     <div id='map'></div>
     <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="Go Anywhere" aria-label="location on map">
+        <input type="text" class="goAnywhere" placeholder="Go Anywhere" aria-label="location on map">
         <div class="input-group-append">
-            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
+            <button class="btn btn-outline-secondary" type="button" id="update-map-btn">Take Me There</button>
         </div>
     </div>
 </div>
