@@ -2,7 +2,7 @@
 $(document).ready(function() {
     //======================== cycle through 3 days =========================
     $.get("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkSkyToken + "/29.4241,-98.4936").done(function (data) {
-
+        console.log(data.daily);
         var forecast = "";
         $('#blah').html(function () {
             for (var i = 0; i < 3; i++) {
@@ -12,7 +12,7 @@ $(document).ready(function() {
                 var humidity = data.daily.data[i].humidity;
                 var windSpeed = data.daily.data[i].windSpeed;
                 var pressure = data.daily.data[i].pressure;
-                var dateObject = new Date(1551736889 * 1000);
+                var dateObject = new Date(data.daily.data[i].time * 1000);
                 console.log(dateObject.toString());
 
                 forecast += "<div class='card col-4'>";
@@ -27,6 +27,7 @@ $(document).ready(function() {
             }
             return forecast;
 
+        })
         });
 
         //============= weather icon array function=======================
@@ -84,19 +85,28 @@ $(document).ready(function() {
             }
         }
 
-
-
-
         //====================== my map ====================
 
+    mapboxgl.accessToken = mapboxToken;
+    var map = new mapboxgl.Map({
+        container: 'map', // container id
+        style: 'mapbox://styles/mapbox/dark-v10', //hosted style id
+        center: [-98.4916, 29.4252], // starting position
+        zoom: 10 // starting zoom
+    });
 
-        mapboxgl.accessToken = mapboxToken;
-        var map = new mapboxgl.Map({
-            container: 'map',
-            style: 'mapbox://styles/mapbox/streets-v9',
-            zoom: 10,
-            center: [-98.4916, 29.4252]
-        });
+    var marker = new mapboxgl.Marker({
+        draggable: true
+    })
+        .setLngLat([-98.4916, 29.4252])
+        .addTo(map);
+
+    function onDragEnd() {
+        var lngLat = marker.getLngLat();
+
+    }
+
+    marker.on('dragend', onDragEnd);
 
         //=============== update map after input
         // $("#update-map-btn").click(function(){
@@ -107,5 +117,4 @@ $(document).ready(function() {
         //    //
         //     $('#blah').html(newLocation);
         // });
-    })
 });
