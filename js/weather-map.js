@@ -1,7 +1,7 @@
 "use strict";
 $(document).ready(function() {
     //======================== cycle through 3 days =========================
-    $.get("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkSkyToken + "/29.4241,-98.4936").done(function (data) {
+    // $.get("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkSkyToken + "/29.4241,-98.4936").done(function (data) {
         $('#update-map-btn').click(function () {
             var inputLat = $('#lat').val();
             var inputLon = $('#lon').val();
@@ -118,5 +118,6 @@ $(document).ready(function() {
         }
 
         marker.on('dragend', onDragEnd);
-    })
+        onDragEnd();
+    // })
 });
