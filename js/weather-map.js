@@ -98,7 +98,7 @@ $(document).ready(function() {
             container: 'map', // container id
             style: 'mapbox://styles/mapbox/dark-v10', //hosted style id
             center: [-98.4916, 29.4252], // starting position
-            zoom: 10 // starting zoom
+            zoom: 6 // starting zoom
         });
         map.addControl(new MapboxGeocoder({
             accessToken: mapboxgl.accessToken,
@@ -116,7 +116,7 @@ $(document).ready(function() {
             coordinates.style.display = 'block';
             coordinates.innerHTML = 'Longitude: ' + lngLat.lng + '<br />Latitude: ' + lngLat.lat;
         }
-
         marker.on('dragend', onDragEnd);
+        // })
     })
 });
