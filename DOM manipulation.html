@@ -38,24 +38,19 @@
             //    log what the value is
             var newColor = $('#color-spec').val();
             //    change the span with #color to the correct color
-            $('#color').css('color', newColor);
+            $('#color').css('background-color', newColor);
             //    change the span with #color to the correct text
             $('#color').html(newColor);
 
         });
 
-        $("#disappear-btn").click(function(e){
-            // $('div').hide();
-            var $dBtn = $(e.target);
-            $dBtn.parent().css('display','none');
 
-        })
         // var $dBtn = $('#disappear-btn'); ||
         // var $dBtn = $(this); ||
 
-        // $('#disappear.btn').click(function(){
-        //     $('body').css('background-color','blue');
-        // })
+        $('#disappear.btn').click(function(){
+            $('body').css('background-color','blue');
+        })
 
 
     })

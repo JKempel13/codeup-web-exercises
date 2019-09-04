@@ -4,33 +4,37 @@ $(document).ready(function() {
         $('#update-map-btn').click(function () {
             var inputLat = $('#lat').val();
             var inputLon = $('#lon').val();
-                $.get('https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/' + darkSkyToken + "/" + inputLat + ',' + inputLon).done(function (data) {
-                    var forecast = "";
-                    $('#blah').html(function () {
-                        for (var i = 0; i < 3; i++) {
-                            var highTemp = data.daily.data[i].apparentTemperatureHigh + '<span>&#176;</span>';
-                            var lowTemp = data.daily.data[i].apparentTemperatureLow + '<span>&#176;</span>';
-                            var weatherIcon = data.daily.data[i].icon;
-                            var humidity = data.daily.data[i].humidity;
-                            var windSpeed = data.daily.data[i].windSpeed;
-                            var pressure = data.daily.data[i].pressure;
-                            var dateObject = new Date(data.daily.data[i].sunriseTime * 1000);
-                            var n = dateObject.toDateString();
+    $.get('https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/' + darkSkyToken + "/" + inputLat + ',' + inputLon).done(function (data) {
+        var forecast = "";
+        $('#blah').html(function () {
+            for (var i = 0; i < 3; i++) {
+                var highTemp = data.daily.data[i].apparentTemperatureHigh + '<span>&#176;</span>';
+                var lowTemp = data.daily.data[i].apparentTemperatureLow + '<span>&#176;</span>';
+                var weatherIcon = data.daily.data[i].icon;
+                var humidity = data.daily.data[i].humidity;
+                var windSpeed = data.daily.data[i].windSpeed;
+                var pressure = data.daily.data[i].pressure;
+                var dateObject = new Date(data.daily.data[i].sunriseTime * 1000);
+                var n = dateObject.toDateString();
 
-                            forecast += "<div class='card col-4'>";
-                            forecast += "<h4>" + highTemp + "/" + lowTemp + "</h4>";
-                            forecast += "<img src='" + displayIconPicture(iconsArr, weatherIcon) + "'>";
-                            forecast += "<p>" + weatherIcon + "</p>";
-                            forecast += "<p><span style='font-weight: bold'>Humidity: </span>" + humidity + "</p>";
-                            forecast += "<p><span style='font-weight: bold'>Wind: </span>" + windSpeed + "</p>";
-                            forecast += "<p><span style='font-weight: bold'>Pressure: </span>" + pressure + "</p>";
-                            forecast += "<p><span style='font-weight: bold'>Date: </span>" + n + "</p>";
-                            forecast += "</div>";
-                        }
-                        return forecast;
-                    });
-                })
-            });
+                forecast += "<div class='card col-4'>";
+                forecast += "<h4>" + highTemp + "/" + lowTemp + "</h4>";
+                forecast += "<img src='" + displayIconPicture(iconsArr, weatherIcon) + "'>";
+                forecast += "<p>" + weatherIcon + "</p>";
+                forecast += "<p><span style='font-weight: bold'>Humidity: </span>" + humidity + "</p>";
+                forecast += "<p><span style='font-weight: bold'>Wind: </span>" + windSpeed + "</p>";
+                forecast += "<p><span style='font-weight: bold'>Pressure: </span>" + pressure + "</p>";
+                forecast += "<p><span style='font-weight: bold'>Date: </span>" + n + "</p>";
+                forecast += "</div>";
+            }
+            return forecast;
+        });
+    });
+});
+
+
+
+
         //============= weather icon array function=======================
         var iconsArr = [
             {
@@ -90,14 +94,25 @@ $(document).ready(function() {
             center: [-98.4916, 29.4252], // starting position
             zoom: 10 // starting zoom
         });
+        //========== geocode part=========================
 
-        map.addControl(new MapboxGeocoder({
-            accessToken: mapboxgl.accessToken,
-            mapboxgl: mapboxgl,
-            marker: false
-        }));
+    var geocoder = new MapboxGeocoder({
+        accessToken: mapboxgl.accessToken,
+        mapboxgl: mapboxgl,
+        marker: false
+    });
+        map.addControl(geocoder);
+    geocoder.on('result', function(result) {
+        console.log(result.result.center);
+        var lat = result.result.center[1];
+        var long = result.result.center[0];
+        marker.setLngLat([long, lat]);
+        $('h2').text(result.result.place_name);
+        onDragEnd();
+        // updateWeather();
+    });
 
-        var marker = new mapboxgl.Marker({
+    var marker = new mapboxgl.Marker({
             draggable: true
         })
             .setLngLat([-98.4916, 29.4252])
@@ -138,5 +153,6 @@ $(document).ready(function() {
         }
         marker.on('dragend', onDragEnd);
         onDragEnd();
+
 });
 
