@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.2.1/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.2.1/mapbox-gl.css' rel='stylesheet' />
+
     <style>
         body {
             background-color: #B3D9F8;
@@ -30,23 +31,23 @@
 <div class="container">
     <h1>Weather Application</h1>
     <br>
-    <h2 id="place"></h2>
+    <h2 id="place">San Antonio</h2>
     <div id="blah">
         <div></div>
     </div>
     <p></p>
     <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.1/mapbox-gl-geocoder.min.js'></script>
     <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.1/mapbox-gl-geocoder.css' type='text/css' />
-    <div id='map'></div>
-    <pre id='coordinates' class='coordinates'></pre>
     <div class="input-group mb-3">
-<!--        <input type="text" class="goAnywhere" placeholder="Go Anywhere" aria-label="location on map">-->
-        <input type="text" id='lat'>
-        <input type="text" id='lon'>
+        <input id="userInput" type="text" class="goAnywhere" placeholder="Go Anywhere" aria-label="location on map">
         <div class="input-group-append">
             <button class="btn btn-outline-secondary" type="button" id="update-map-btn">Take Me There</button>
         </div>
     </div>
+    <div id='map'></div>
+        <input type="text" id='lat'>
+        <input type="text" id='lon'>
+    <pre id='coordinates' class='coordinates'></pre>
 </div>
 
     <script src="js/jquery-2.2.4.js"></script>
