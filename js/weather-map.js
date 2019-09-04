@@ -94,11 +94,13 @@ $(document).ready(function() {
             container: 'map', // container id
             style: 'mapbox://styles/mapbox/dark-v10', //hosted style id
             center: [-98.4916, 29.4252], // starting position
-            zoom: 10 // starting zoom
+            zoom: 10, // starting zoom
+
         });
         map.addControl(new MapboxGeocoder({
             accessToken: mapboxgl.accessToken,
-            mapboxgl: mapboxgl
+            mapboxgl: mapboxgl,
+            marker: false
         }));
 
         var marker = new mapboxgl.Marker({
