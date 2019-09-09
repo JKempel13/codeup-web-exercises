@@ -68,7 +68,7 @@ const users = [
 
 // 6. Use .reduce to get the list of user's names in a single string. Example: Your instructors are: ryan, luis, zach, fernando, justin.
 
-let instructorNames = users.reduce((instructors, user) => `Your instructors are:` + `${user.name}`);
-console.log(instructorNames);
+// let instructorNames = users.reduce((instructors, user) => instructors + user.name + ", ", `Your instructors are: `);
+// console.log(instructorNames);
 
 
