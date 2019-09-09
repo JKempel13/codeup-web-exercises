@@ -8,14 +8,15 @@ $(document).ready(function() {
                 $.get('https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/' + darkSkyToken + "/" + lat + ',' + lon).done(function (data) {
                     var forecast = "";
                     $('#blah').html(function () {
+                        let apiData = data.daily.data[i];
                         for (var i = 0; i < 3; i++) {
-                            var highTemp = data.daily.data[i].apparentTemperatureHigh + '<span>&#176;</span>';
-                            var lowTemp = data.daily.data[i].apparentTemperatureLow + '<span>&#176;</span>';
-                            var weatherIcon = data.daily.data[i].icon;
-                            var humidity = data.daily.data[i].humidity;
-                            var windSpeed = data.daily.data[i].windSpeed;
-                            var pressure = data.daily.data[i].pressure;
-                            var dateObject = new Date(data.daily.data[i].sunriseTime * 1000);
+                            var highTemp = apiData.apparentTemperatureHigh + '<span>&#176;</span>';
+                            var lowTemp = apiData.apparentTemperatureLow + '<span>&#176;</span>';
+                            var weatherIcon = apiData.icon;
+                            var humidity = apiData.humidity;
+                            var windSpeed = apiData.windSpeed;
+                            var pressure = apiData.pressure;
+                            var dateObject = new Date(apiData.sunriseTime * 1000);
                             var n = dateObject.toDateString();
 
                             forecast += "<div class='card col-4'>";
@@ -31,8 +32,17 @@ $(document).ready(function() {
                         return forecast;
                     });
                 });
-            };
-            weather();
+            }
+            // weather();
+            // const weather = (lat,lon) => {
+            //     $.get('https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/' + darkSkyToken + "/" + lat + ',' + lon).done(function (data) {
+            //         $('#blah').html(function () {
+            //             for (let i = 0; i < 3; i++) {
+            //                 let apiData = data.daily.data[i];
+            //             }
+            //         })
+            //     })
+            // }
 });
 
 
