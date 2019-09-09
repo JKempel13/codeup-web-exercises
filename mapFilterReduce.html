@@ -26,26 +26,7 @@
 
         const fruits = ["cantaloupe", "orange", "date", "elderberry", "ugli fruit", "pineapple"];
 
-        const customers = [
-            {
-                name: "Fred",
-                age: 58,
-                occupation: "Police Officer",
-                noOfPurchases: 4
-            },
-            {
-                name: "Samantha",
-                age: 54,
-                occupation: "Teacher",
-                noOfPurchases: 18
-            },
-            {
-                name: "Charles",
-                age: 38,
-                occupation: "Librarian",
-                noOfPurchases: 9
-            }
-        ];
+
 
         const pets = [
             {
@@ -95,9 +76,29 @@
 
         // PROBLEM 2 - create array of user objects based on the customers array
         // of objects (each user object should just have name and age properties)
+        const customers = [
+            {
+                name: "Fred",
+                age: 58,
+                occupation: "Police Officer",
+                noOfPurchases: 4
+            },
+            {
+                name: "Samantha",
+                age: 54,
+                occupation: "Teacher",
+                noOfPurchases: 18
+            },
+            {
+                name: "Charles",
+                age: 38,
+                occupation: "Librarian",
+                noOfPurchases: 9
+            }
+        ];
 
-        let nameAndAgeObject = customers.map(user => user.name);
-        console.log(nameAndAgeObject);
+        let nameAndAgeObject = customers.reduce((nameAgeObject, user) => {nameAgeObject + user.name});
+        // console.log(nameAndAgeObject);
 
         // PROBLEM 3 - create an array of civil servant customers (teachers and police officers)
         // containing the same properties as the objects on the customers objects
