@@ -78,7 +78,7 @@ let instructors = users.reduce((sentence,user, i)=> {
     return sentence;
 }, " Your instructors are : ");
 
-console.log(instructors);
+// console.log(instructors);
 
 //======================== JOHN'S BONUS =======================//
 const uniqueLanguages = users.reduce((listOfLangs, user) => {
@@ -90,7 +90,7 @@ const uniqueLanguages = users.reduce((listOfLangs, user) => {
     return listOfLangs;
 }, []);
 
-console.log(uniqueLanguages);
+// console.log(uniqueLanguages);
 
 
 

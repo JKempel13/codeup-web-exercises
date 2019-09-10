@@ -27,7 +27,82 @@
         const fruits = ["cantaloupe", "orange", "date", "elderberry", "ugli fruit", "pineapple"];
 
 
+        const family = [
+            {
+                name: "Pam",
+                gender: "female",
+                age: 29,
+            },
+            {
+                name: "Amelie",
+                gender: "female",
+                age: 10,
+            },
+            {
+                name: "Justin",
+                gender: "male",
+                age: 32,
+            },
+        ];
 
+        // PROBLEM 1 - create an array of the first letters of each fruit
+
+        let firstLetterArray = fruits.map(fruit => fruit.slice(0, 1));
+        console.log(firstLetterArray);
+
+        // PROBLEM 2 - create array of user objects based on the customers array
+        // of objects (each user object should just have name and age properties)
+
+        // let nameAndAgeObject = customers.map(user => user.name + ", " + user.age);
+        // console.log(nameAndAgeObject);
+
+        // PROBLEM 3 - create an array of civil servant customers (teachers and police officers)
+        // containing the same properties as the objects on the customers objects
+        const customers = [
+            {
+                name: "Fred",
+                age: 58,
+                occupation: "Police Officer",
+                noOfPurchases: 4
+            },
+            {
+                name: "Samantha",
+                age: 54,
+                occupation: "Teacher",
+                noOfPurchases: 18
+            },
+            {
+                name: "Charles",
+                age: 38,
+                occupation: "Librarian",
+                noOfPurchases: 9
+            }
+        ];
+
+        let arrOfCivilServiceEmp = customers.filter((user, i) => {
+            if (i < customers.length - 1) {
+                return customers.slice(0, 2);
+            }
+        });
+        // console.log(arrOfCivilServiceEmp);
+
+
+        // PROBLEM 4 - determine the average age of customers
+
+        let ageOfCustomers = customers.reduce((sumOfAge, user) => sumOfAge + user.age, 0);
+        // console.log(ageOfCustomers / customers.length);
+
+        // PROBLEM 5 - create a function makeSuperPet() that takes in the pets array as input and returns a single pet object
+        // with the following shape...
+        /*
+
+            {
+                name: ALL_PET_NAMES_CONCATENATED_INTO_A_SINGLE_STRING,
+                age: THE_TOTAL_OF_ALL_PET_AGES,
+                breed: THE_FIRST_LETTERS_OF_ALL_PET_BREEDS_CONCATENATATED_INTO_A_SINGLE_STRING
+            }
+
+         */
         const pets = [
             {
                 name: 'Bud',
@@ -50,75 +125,22 @@
                 breed: 'Pug'
             }
         ];
+        let allPetNames = pets.reduce((petNames, pet) => petNames + pet.name, " ");
+        console.log(allPetNames);
+        let ageOfAllPets = pets.reduce((totalAge, pet) => totalAge + pet.age, 0);
+        console.log(ageOfAllPets);
+        let firstLetterOfBreed = pets.map(pet => pet.breed.slice(0, 1)," ");
+        console.log(firstLetterOfBreed);
 
-        const family = [
-            {
-                name: "Pam",
-                gender: "female",
-                age: 29,
-            },
-            {
-                name: "Amelie",
-                gender: "female",
-                age: 10,
-            },
-            {
-                name: "Justin",
-                gender: "male",
-                age: 32,
-            },
-        ];
+        function makeSuperPet (pets) {
 
-        // PROBLEM 1 - create an array of the first letters of each fruit
+    }
 
-        let firstLetterArray = fruits.map(fruit => fruit.slice(0,1));
-        // console.log(firstLetterArray);
-
-        // PROBLEM 2 - create array of user objects based on the customers array
-        // of objects (each user object should just have name and age properties)
-        const customers = [
-            {
-                name: "Fred",
-                age: 58,
-                occupation: "Police Officer",
-                noOfPurchases: 4
-            },
-            {
-                name: "Samantha",
-                age: 54,
-                occupation: "Teacher",
-                noOfPurchases: 18
-            },
-            {
-                name: "Charles",
-                age: 38,
-                occupation: "Librarian",
-                noOfPurchases: 9
-            }
-        ];
-
-        let nameAndAgeObject = customers.reduce((nameAgeObject, user) => {nameAgeObject + user.name});
-        // console.log(nameAndAgeObject);
-
-        // PROBLEM 3 - create an array of civil servant customers (teachers and police officers)
-        // containing the same properties as the objects on the customers objects
-
-        // PROBLEM 4 - determine the average age of customers
-
-        // PROBLEM 5 - create a function makeSuperPet() that takes in the pets array as input and returns a single pet object
-        // with the following shape...
-        /*
-
-            {
-                name: ALL_PET_NAMES_CONCATENATED_INTO_A_SINGLE_STRING,
-                age: THE_TOTAL_OF_ALL_PET_AGES,
-                breed: THE_FIRST_LETTERS_OF_ALL_PET_BREEDS_CONCATENATATED_INTO_A_SINGLE_STRING
-            }
-
-         */
 
         // PROBLEM 6 - take in an array of pets and return an array of the length of first names for pugs only
         // your output for the given input should be [3, 6] for 'Bud' and 'Bowser'
+
+        let lengthOfFirstNames = pets.filter(())
 
 
         // PROBLEM 7 - create a function getFemaleFamilyMembers() that when given the family variable as an argument,
