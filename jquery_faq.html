@@ -10,11 +10,9 @@
             background-attachment: fixed;
             color: white;
         }
-
         .invisible {
             visibility: hidden;
         }
-
         .show {
             background-color: #4CAF50;
             border: none;
@@ -25,7 +23,6 @@
             display: inline-block;
             font-size: 16px;
         }
-
         #register {
             display:none;
         }
@@ -103,7 +100,6 @@
             <li>Amistad National Recreation Area supports flora and fauna in a combination not found in any other National Park Service site.</li>
             <li>The entire Amistad NRA area is underlain by 100 million year-old Cretaceous limestone.</li>
         </ul>
-
     <button class="show">Do Stuff!</button>
 
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
@@ -140,13 +136,12 @@
                 $(this).next().html('<h2>I want to be a picture....</h2>');
             }
         );
-
         $("span").click(function(e) {
             var letter = $(e.target);
             letter.parent().css('display', 'none');
         });
 
-        $('#register').delay(8000).fadeIn();
+        $('#register').delay(5000).fadeIn();
 
 
     </script>
