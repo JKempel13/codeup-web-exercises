@@ -63,7 +63,7 @@ $(document).ready(function() {
                 name: "rain"
             },
             {
-                link: "img/SVG/Snowflakes.svg",
+                link: "img/SVG/Snowflake.svg",
                 name: "snow"
             },
             {
