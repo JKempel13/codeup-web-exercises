@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Traversal Lecture</title>
+</head>
+<body>
+​
+<main>
+    ​
+    <article>
+        <h3>Top Bonds</h3>
+        <section>Beginning</section>
+        <hr>
+        <section>Middle</section>
+        <hr>
+        <section>End</section>
+        <hr>
+        <section>
+
+            <ol>
+                <li>Craig</li>
+                <li>Brosnan</li>
+                <li>Connery</li>
+                <li>Dalton</li>
+                <li>Moore</li>
+            </ol>
+            ​
+        </section>
+        ​
+    </article>
+    ​
+    <article>
+        <h3>Top Books</h3>
+        <section>Beginning</section>
+        <hr>
+        <section>Middle</section>
+        <hr>
+        <section>End</section>
+        <hr>
+        <section>
+
+            <ol>
+                <li>LOTR</li>
+                <li>1984</li>
+                <li>20,000 Legues Under the Sea</li>
+                <li>R is for Rocket</li>
+                <li>The War of the Worlds</li>
+            </ol>
+            ​
+        </section>
+
+    </article>
+    ​
+    <article>
+        <h3>Top Pets</h3>
+        <section>Beginning</section>
+        <hr>
+        <section>Middle</section>
+        <hr>
+        <section>End</section>
+        <hr>
+        <section>
+
+            <ol>
+                <li>Dogs</li>
+                <li>Cats</li>
+                <li>Bats</li>
+                <li>Rats</li>
+                <li>Gnats</li>
+            </ol>
+            ​
+        </section>
+
+    </article>
+
+</main>
+​
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+​
+<script>
+   "use strict";
+   // Highlight all sections
+   $('section').css('background-color', '#ef0');
+   // Highlight all articles
+   $('article').css('background-color', '#ef0');
+
+   // Highlight the first article
+    $('article').first().css('background-color','#ef0');
+
+   // Highlight the last article
+    $('article').last().css('background-color','#ef0');
+
+   // Highlight the second article
+   $('article').first().next().css('background-color','#ef0');
+
+   // Highlight the third li of the entire page
+   $('li').first().next().next().css('background-color', '#ef0');
+
+   // Highlight the children of all the ordered lists
+    $('ol').children().css('background-color','#ef0');
+
+   // Highlight all the sections of the first article
+   $('article').first().children().css('background-color','#ef0');
+
+   // Highlight the ordered list of the first article
+    $('article').first().children().last().children().css('background-color','#ef0');
+//    ^^target the first article, target the first child of that first article, target the children of the last child of the first article//
+
+   // Highlight the entire ordered list when a list item is clicked
+    $('li').click(function(){
+        $(this).parent().css('background-color','#ef0');
+    })
+
+   // Highlight the first nested element inside all article elements
+   $('article').each(function(index, element) {
+       $(this).children().first().css('background-color', '#ef0');
+   });
+   //=================================Using .EACH as a loop to go through each article===============================================================
+
+   // Highlight the second list item of all ordered lists
+$('ol').each(function(index,element){
+    $(this).children().first().next().css('background-color','#ef0');
+});
+
+   // Highlight the third list item of all ordered lists
+$('ol').each(function(index,element){
+    $(this).children().first().next().next().css('background-color','#ef0');
+});
+
+   // Highlight the first li of the second ordered list
+   $('article').first().next().children().last().children().children().first().css('background-color','#ef0');
+   //@@@@@@@@@  ^^^^^^^^^^^^^^ **************************** ..................
+   //@ = this targets all articles
+   //^^ = this is targeting the second article starting from the .FIRST() and moving to the second (.NEXT())
+   //*** = this is targeting the children (<ol>) of the last child (<section>) in the second article
+   //.... = this is targeting the first child (first <li>) of the last child (<section>)
+
+
+   // alert each of the top five items when double clicking on the header for a section
+       $('h3').dblclick(function(){
+       $(this).parent().children().last().children().children().each(function(index, element){
+           alert($(element).text());
+       });
+   });
+
+   // Give a azure background color to every other list item (first item should be azure)
+    if ('li' % 2 !== 0) {
+        $('li').css('background-color','azure');
+    }
+
+</script>
+</body>
+</html>
