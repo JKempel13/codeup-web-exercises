@@ -50,11 +50,7 @@
         let firstLetterArray = fruits.map(fruit => fruit.slice(0, 1));
         console.log(firstLetterArray);
 
-        // PROBLEM 2 - create array of user objects based on the customers array
-        // of objects (each user object should just have name and age properties)
 
-        // let nameAndAgeObject = customers.map(user => user.name + ", " + user.age);
-        // console.log(nameAndAgeObject);
 
         // PROBLEM 3 - create an array of civil servant customers (teachers and police officers)
         // containing the same properties as the objects on the customers objects
@@ -78,6 +74,12 @@
                 noOfPurchases: 9
             }
         ];
+
+// PROBLEM 2 - create array of user objects based on the customers array
+// of objects (each user object should just have name and age properties)
+        let nameAndAgeObject = customers.map(user => user.name + ", " + user.age);
+        // console.log(nameAndAgeObject);
+
 
         let arrOfCivilServiceEmp = customers.filter((user, i) => {
             if (i < customers.length - 1) {
@@ -125,22 +127,21 @@
                 breed: 'Pug'
             }
         ];
-        let allPetNames = pets.reduce((petNames, pet) => petNames + pet.name, " ");
-        console.log(allPetNames);
-        let ageOfAllPets = pets.reduce((totalAge, pet) => totalAge + pet.age, 0);
-        console.log(ageOfAllPets);
-        let firstLetterOfBreed = pets.map(pet => pet.breed.slice(0, 1)," ");
-        console.log(firstLetterOfBreed);
 
-        function makeSuperPet (pets) {
-
-    }
+        // const makeSuperPet = pets => {
+            let allPetNames = pets.reduce((petNames, pet) => petNames + pet.name, " ");
+            console.log(allPetNames);
+            let ageOfAllPets = pets.reduce((totalAge, pet) => totalAge + pet.age, 0);
+            console.log(ageOfAllPets);
+            let firstLetterOfBreed = pets.map(pet => pet.breed.slice(0,1));
+            console.log(firstLetterOfBreed);
+    // };
+    //     console.log(makeSuperPet());
 
 
         // PROBLEM 6 - take in an array of pets and return an array of the length of first names for pugs only
         // your output for the given input should be [3, 6] for 'Bud' and 'Bowser'
 
-        let lengthOfFirstNames = pets.filter(())
 
 
         // PROBLEM 7 - create a function getFemaleFamilyMembers() that when given the family variable as an argument,
@@ -148,6 +149,8 @@
 
         // PROBLEM 8 - create a function makeLongPetString() that when given the variable of pets,
         // returns a string of all property values with dashes separating each property value
+
+
 
         // PROBLEM 9 - create a function that when given an array of first names, returns an array of the same names with a last name of Smith
 

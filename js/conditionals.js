@@ -17,33 +17,34 @@
  */
 
 //
-// var selectedNumber = confirm("Would you like to enter a number?");
-//
-//
-// if (selectedNumber) {
-//
-//     var userNumberInput = prompt("What number would you like to enter?");
-//
-//     var isNum = !isNaN(userNumberInput);
-//
-//     if (isNum) {
-//
-//         var userNum = parseFloat(userNumberInput);
-//
-//         var isEven = userNumberInput % 2 === 0;
-//
-//         var isEvenMessage = (isEven) ? "That number is even" : "That number is odd";
-//         alert(isEvenMessage);
-//
-//         alert (+userNumberInput + +100);
-//
-//         var isPos = Math.sign(userNumberInput) === 1;
-//         var isPosMessage = (isPos) ? "Number is positive" : "Number is negative";
-//         alert(isPosMessage);
-//
-//     } else {
-//         alert("That is not a number!")
-//     }
+var selectedNumber = confirm("Would you like to enter a number?");
+
+
+if (selectedNumber) {
+
+    var userNumberInput = prompt("What number would you like to enter?");
+
+    var isNum = !isNaN(userNumberInput);
+
+    if (isNum) {
+
+        var userNum = parseFloat(userNumberInput);
+
+        var isEven = userNumberInput % 2 === 0;
+
+        var isEvenMessage = (isEven) ? "That number is even" : "That number is odd";
+        alert(isEvenMessage);
+
+        alert(+userNumberInput + +100);
+
+        var isPos = Math.sign(userNumberInput) === 1;
+        var isPosMessage = (isPos) ? "Number is positive" : "Number is negative";
+        alert(isPosMessage);
+
+    } else {
+        alert("That is not a number!")
+    }
+}
 //
 /* ########################################################################## */
 
