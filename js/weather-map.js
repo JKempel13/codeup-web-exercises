@@ -45,9 +45,6 @@ $(document).ready(function() {
             // }
 });
 
-
-
-
         //============= weather icon array function=======================
         var iconsArr = [
             {
