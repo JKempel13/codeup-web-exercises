@@ -49,9 +49,9 @@ let emails = [];
 let names = [];
 
 // TODO: rewrite the following using arrow functions
-// users.forEach(function(user) {
-//   return emails.push(user.email);
-// });
+users.forEach(function(user) {
+  return emails.push(user.email);
+});
 
 users.forEach(user => emails.push(user.email));
 

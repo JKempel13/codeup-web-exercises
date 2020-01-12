@@ -13,7 +13,7 @@ function sayHello (name) {
     return "Hello, " + name + "!";
 }
 
-console.log(sayHello("Jason Kempel"));
+// console.log(sayHello("Jason Kempel"));
 
 
 /**
@@ -27,7 +27,7 @@ console.log(sayHello("Jason Kempel"));
 // sayHello("Jason Kempel");
 var helloMessage = sayHello("Jason Kempel");
 
-console.log(helloMessage);
+// console.log(helloMessage);
 
 
 /**
@@ -62,9 +62,10 @@ var random = Math.floor((Math.random() * 3) + 1);
  * number)
  */
 
-function isTwo (num) {
-    return num === 2;
-}
+// function isTwo (num) {
+//     return num === 2;
+// }
+const isTwo = num => num === 2;
 
 console.log(isTwo(random), random);
 
@@ -80,11 +81,14 @@ console.log(isTwo(random), random);
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
 
-function calculateTip (tipPercentage, billTotal) {
-    return tipPercentage * billTotal;
-}
+// function calculateTip (tipPercentage, billTotal) {
+//     return tipPercentage * billTotal;
+// }
 
-console.log (calculateTip(.10, 100));
+     //arrow function
+const calculateTip = (tipPercentage, billTotal) => tipPercentage * billTotal;
+
+console.log (calculateTip(.10, 150)); //15
 
 /**
  * TODO:
@@ -93,14 +97,16 @@ console.log (calculateTip(.10, 100));
  * then display the dollar amount they should tip
  */
 //
-// var billTotal = Number(prompt("Bill Total?"));
-// var tipPercentage = Number(prompt("What percentage would you like to tip?"));
+let billTotal = Number(prompt("Bill Total?"));
+let tipPercentage = Number(prompt("What percentage would you like to tip?"));
 //
 // function formatNumtoCurrency (num) {
 //     return "$" + num.toFixed(2);
 // }
-//
-// alert("Suggested tip: " + formatNumtoCurrency(calculateTip(tipPercentage, billTotal)));
+
+const formatNumToCurrency = num => "$" + num.toFixed(2);
+
+alert("Suggested tip: " + formatNumToCurrency(calculateTip(tipPercentage, billTotal)));
 
 // console.log(typeof billTotal);
 
@@ -120,10 +126,12 @@ console.log (calculateTip(.10, 100));
  */
 
 
-function applyDiscount (originalPrice,discountPercent) {
-    return originalPrice - (originalPrice * (discountPercent / 100));
-}
+// function applyDiscount (originalPrice,discountPercent) {
+//     return originalPrice - (originalPrice * (discountPercent / 100));
+// }
+
+const applyDiscount = (originalPrice, discountPercent) => originalPrice - (originalPrice * (discountPercent / 100));
 
 
-console.log (applyDiscount(100, 20), 80);
+console.log (applyDiscount(100, 20));
 
