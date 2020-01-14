@@ -7,7 +7,39 @@ body {
     background: #E6E6E6;
 }
 
-/*.content{*/
-/*    margin-top: 1em;*/
-/*    text-align: center;*/
-/*}*/
+.tabs {
+    width: 65%;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16),
+                0 3px 6px rgba(0,0,0,0.23);
+    border-radius: 4px;
+}
+
+.tabs_navigation {
+    border-bottom: 1px solid #E0E0E0;
+}
+
+.tabs_navigation button {
+    color: #1E95EA;
+    border: none;
+    padding: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    outline: none;
+}
+
+.tabs_navigation button:hover {
+    background: #F5F5F5;
+    cursor: pointer;
+}
+
+.tabs_content {
+    padding: 20px;
+}
+
+.single-tab {
+    display: none;
+}
+
+.single-tab:first-child {
+    display: block;
+}
