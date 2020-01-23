@@ -1,3 +1,4 @@
+(function() {
 "use strict";
 
     function changeTab(tab) {
@@ -8,3 +9,10 @@
         }
         document.getElementById(tab).style.display = "block";
     }
+
+    $(document).ready(function(){
+        $('.btn1').click(function(){
+            $(this).
+        })
+    })
+})();
