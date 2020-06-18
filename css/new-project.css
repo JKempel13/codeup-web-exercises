@@ -1,10 +1,19 @@
 * {
     padding: 0;
-    margin-bottom: 1em;
+    margin-bottom: .5em;
 }
 
 body {
     background: #E6E6E6;
+}
+
+.jumbotron {
+    background-color: #00ABA9;
+}
+
+.learned {
+    font-size: 48px;
+    font-family: "Brush Script MT";
 }
 
 .tabs {
@@ -45,4 +54,11 @@ body {
 
 .single-tab:first-child {
     display: block;
+}
+
+/*for pg 2 of project*/
+
+.card-img-top {
+    height: 70vh;
+    width: 30vh;
 }
