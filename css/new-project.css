@@ -62,3 +62,14 @@ body {
     height: 70vh;
     width: 30vh;
 }
+
+.mistakes {
+    display: flex;
+    justify-content: center;
+    font-family: "Brush Script MT";
+}
+
+.card-img {
+    width: 100vw;
+    height: 80vh;
+}
