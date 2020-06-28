@@ -8,9 +8,18 @@
     justify-content: space-evenly;
 }
 
+.card {
+    height: 20em;
+    width: 35rem;
+}
+
 .card-img-top {
     height: 70vh;
     width: 30vh;
+}
+
+.iS {
+    font-style: italic;
 }
 
 .mistakes {
@@ -21,14 +30,5 @@
 
 .card-img {
     width: 100vw;
-    height: 80vh;
-}
-
-@keyframes blink {
-    0%, 100% { opacity: 0; }
-    50% { opacity: 1; }
-}
-
-.dot {
-    animation: blink 2s infinite;
+    height: 70vh;
 }
